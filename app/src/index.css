@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "~animate.css/animate.css";
-/* Fonts:
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&family=Open+Sans:wght@300;500&display=swap');
-*/
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Koulen&family=Libre+Barcode+39&display=swap');
 
 html, body, #root, .App, .App>div {
     height: 100%

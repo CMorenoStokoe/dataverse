@@ -1,10 +1,27 @@
-export type triggers = 'return_home' | 'visit_pulsar' | 'visit_asteroid' | 'visit_planet';
 
-export interface experience {
+/*
+
+    Typings
+
+*/
+
+export type Trigger = 
+    'return_home' | 
+    'visit_pulsar' | 
+    'visit_asteroid' | 
+    'visit_planet';
+
+export type Discipline = 
+    'Web Development' |
+    'Visualisation & Intelligence' |
+    'Complex Systems Analysis' | 
+    'Data Engineering';
+
+export interface Experience {
     year: number;
     title: string;
     description: string;
-    link: string | null;
-    image: string | null;
-    category?: 'data science' | 'website development'
+    link: string | undefined;
+    image: string | undefined;
+    disciplines: Discipline[];
 };

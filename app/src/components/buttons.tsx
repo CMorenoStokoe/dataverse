@@ -1,5 +1,7 @@
-export const Btn = (props:{
-    text: string;
+import { Discipline } from "../model/types";
+
+export const SelectDisciplineBtn = (props:{
+    discipline: Discipline;
     active: boolean;
     onClick: ()=>void;
 }) => {
@@ -7,12 +9,14 @@ export const Btn = (props:{
         <button role="button"
         onClick={props.onClick}
         className={`
-            m-2 p-2 transition-all 
-            bg-grey-100 text-black 
-            ${props.active ? 'font-bold' : 'font-normal'} 
-            hover:font-bold 
+            m-2 p-3 transition-all 
+            font-display tracking-wider 
+            ${props.active ? 'text-white' : 'text-gray-300'}
+            ${props.active ? 'bg-primary-600' : 'bg-primary-500'}
+            hover:text-white hover:bg-primary-600 
+            rounded-md
         `}>
-            {props.text}
+            {props.discipline}
         </button>
     )
 }
