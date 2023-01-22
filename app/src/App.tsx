@@ -5,8 +5,7 @@ export const App = () => {
   const [activeView, setActiveView] = useState<'splash' | 'home'>('home');
 
   return (
-    <div className="App">
-      <header/>
+    <div className='App flex justify-center'>
       { <Homepage/> }
     </div>
   );

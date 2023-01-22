@@ -38,7 +38,7 @@ export const experience:Experience[] = [
         description: 'Games for good is a catalogue of knowledge games which are helping us understand public health',
         link: 'g4g.html',
         image: 'promo/video-g4g.mp4',
-        disciplines: [d.vis, d.cmplx, d.web]
+        disciplines: [d.vis, d.web]
     },
     {
         year: 2021,
@@ -78,7 +78,7 @@ export const experience:Experience[] = [
         description: 'Players implicitly learn the complexity of network data in Genetic Epidemiology. Play as a public health policy maker and intervene on factors such as smoking, exercise and socialisation in order to improve the health of a simulated nation. We used an accurate propagation model and genetic data to build a realistic simulation, as cmplx as the real-life situation.',
         link: 'https://www.morenostok.io/mendel',
         image: 'img/mrg_promo.PNG',
-        disciplines: [d.web, d.vis, d.cmplx]
+        disciplines: [d.web, d.vis]
     },
     {
         year: 2020,
@@ -86,7 +86,7 @@ export const experience:Experience[] = [
         description: 'As a team we produced a map which helps policy makers and public health experts identify the areas in Wales most vulnerable to COVID-19.',
         link: 'https://covidresponsemap.wales/',
         image: 'img/covidcomms-map.jpg',
-        disciplines: [d.eng, d.cmplx, d.vis]
+        disciplines: [d.eng, d.vis]
     },
     {
         year: 2020,
