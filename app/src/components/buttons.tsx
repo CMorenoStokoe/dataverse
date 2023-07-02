@@ -1,21 +1,41 @@
-import { Discipline } from "../model/types";
 import { faLinkedin, faGithub, faOrcid } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// Templates for buttons
+export const ViewButton = (props: {
+    text: string;
+    onClick: () => void;
+    active: boolean;
+    pos: string;
+}) => <button className={"font-display drop-shadow leading-none text-violet-700 hover:opacity-100 text-2xl text-neutral-400 transition-all absolute " + props.pos + (props.active ? ' opacity-100' : ' opacity-50')} onClick={props.onClick}>
+        <p className="">
+            {props.text}
+        </p>
+        <p className={`absolute font-alien ${props.active ? 'animate__animated animate__flash animate__infinite animate__slow' : ''}`}>
+            {props.text}
+        </p>
+    </button>
+
+
+export const NavButton = (props: {
+    text: string | JSX.Element;
+    onClick: () => void;
+}) => <button className="p-2 pointer-events-auto font-display text-white hover:text-violet-600 text-2xl transition-all" onClick={props.onClick}>
+        {props.text}
+    </button>
+
 export const SelectDisciplineBtn = (props: {
-    discipline: Discipline;
+    discipline: string;
     active: boolean;
     onClick: () => void;
 }) => {
     return (
-        <button role="button"
+        <button
             onClick={props.onClick}
             className={`
-            mr-1 p-2 h-full transition-all 
-            ${props.active ? 'text-violet-600' : 'text-gray-200'} 
-            ${props.active ? 'bg-white' : 'bg-gray-400'} 
-            hover:text-violet-600 hover:bg-white 
-            rounded-t-md 
+            transition-all 
+            ${props.active ? 'text-violet-600' : 'text-neutral-300'} 
+            hover:text-violet-600 
         `}>
             <p className={'font-display'}>{props.discipline}</p>
             {props.active ?

@@ -1,0 +1,44 @@
+/*
+
+    TailWind CSS classes and utilities
+
+*/
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+
+    Fonts
+
+*/
+
+
+@import "~animate.css/animate.css";
+
+
+/*
+
+    Fonts
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Koulen&family=Roboto:wght@100&display=swap');
+
+
+/*
+
+    CSS
+
+*/
+
+
+html,
+body,
+#root {
+    height: 100%
+}
