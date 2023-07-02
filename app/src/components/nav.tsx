@@ -18,7 +18,7 @@ export const Navigation = (props: {
                 ? <NavButton text={<p className="flex flex-row justify-center items-center space-x-2">
                     <FontAwesomeIcon icon={faArrowLeft} /> Back
                 </p>} onClick={props.onClick} />
-                : <div></div>
+                : <div className="w-32"></div>
         }
         <div className="w-full flex flex-col justify-center items-center">
             <p className="font-display text-xl text-white cursor-pointer hover:text-violet-600">
@@ -39,5 +39,7 @@ export const Navigation = (props: {
                 />
             </div>
         </div>
-        <div></div>
+        <a className="w-32 text-center text-xs text-neutral-500 cursor-pointer hover:text-violet-600" href="https://rive.app/" target='_blank'>
+            Powered by Rive animation
+        </a>
     </nav>
