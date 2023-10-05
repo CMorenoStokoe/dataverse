@@ -37,9 +37,12 @@ export const Navigation = (props: {
                     href='https://orcid.org/0000-0002-2865-0940'
                     brand='orcid'
                 />
+                <Socials href="https://dribbble.com/Cmorenostokoe" brand="dribbble" />
+                <Socials href="https://unsplash.com/@stokio" brand="unsplash" />
+                <Socials href="https://cmorenostokoe.itch.io" brand="itch.io" />
             </div>
         </div>
-        <a className="w-32 text-center text-xs text-neutral-500 cursor-pointer hover:text-violet-600" href="https://rive.app/" target='_blank'>
-            Powered by Rive animation
-        </a>
+        <p className="w-32 text-center text-xs text-neutral-500 cursor-pointer hover:text-violet-600">
+            🧪 Rive.js, React
+        </p>
     </nav>

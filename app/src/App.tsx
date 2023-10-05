@@ -26,10 +26,16 @@ export const App = () => {
 	 * Initialise a reactive animation that changes as the user navigates around the page
 	*/
 
+	// Detect mobile browser
+	// @ts-ignore
+	const desktopOrMobileAnimation = (navigator.userAgentData.mobile || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+		? 'starship_mobile.riv'
+		: 'starship.riv';
+
 	// Initialise animation component   
 	const { rive, RiveComponent } = useRive(
 		{
-			src: 'starship.riv',
+			src: desktopOrMobileAnimation,
 			stateMachines: 'STATE_MACHINE',
 			autoplay: true,
 			onLoad: () => { },
@@ -82,7 +88,7 @@ export const App = () => {
 
 	// Return main app element
 	return (
-		<div className='w-full h-full max-h-screen overflow-auto flex flex-col bg-black'>
+		<div className='min-w-full h-full max-h-screen overflow-auto flex flex-col bg-black'>
 
 			{/** 
 			 * * Navigation 
@@ -94,37 +100,39 @@ export const App = () => {
 			 * * Content 
 			 * Main content area
 			*/}
-			<div className="relative w-full">
-				<p className="p-2 w-full text-neutral-500 absolute flex flex-row justify-center top-0">{currentView}</p>
+			<div className="w-full h-full flex flex-col justify-center items-center">
+				<div className="relative w-full">
+					<p className="p-2 w-full text-neutral-500 absolute flex flex-row justify-center top-0">{currentView}</p>
 
-				{/* Animated background*/}
-				<RiveComponent />
+					{/* Animated background*/}
+					<RiveComponent />
 
-				{/** Border for seamless blend into body */}
-				<div className="p-1 border-black border-b-0 border-8 w-full h-full absolute inset-0 z-10"></div>
+					{/** Border for seamless blend into body */}
+					<div className="w-full h-full p-1 border-black border-b-0 border-8 absolute inset-0 z-10"></div>
 
-				{/**
+					{/**
 			 * * Controls
 			 * @returns Buttons for the user to select projects to view
 			 */}
-				{
-					currentView === 'Home'
-						? <ViewButtons views={['Data Science', 'Web and Interface', 'Serious Games']}
-							currentView={currentView} onClick={setCurrentView} />
-						: <ProjectButtons projects={portfolio.filter(x => x.tag === currentView)}
-							onClick={handleChangeProject} />
-				}
+					{
+						currentView === 'Home'
+							? <ViewButtons views={['Data Science', 'Web and Interface', 'Serious Games']}
+								currentView={currentView} onClick={setCurrentView} />
+							: <ProjectButtons projects={portfolio.filter(x => x.tag === currentView)}
+								onClick={handleChangeProject} />
+					}
 
-				{/**
+					{/**
 				 * * Hero
 				 * @returns A hero element
 				 */}
-				{
-					showHero
-						? <Hero project={currentHeroProject} onClick={handleBack} />
-						: <div></div>
-				}
+					{
+						showHero
+							? <Hero project={currentHeroProject} onClick={handleBack} />
+							: <div></div>
+					}
 
+				</div>
 			</div>
 
 		</div>

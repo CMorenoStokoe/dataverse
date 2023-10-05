@@ -34,9 +34,9 @@ const Showcase = (props: { project: Project }) => {
             {embedMedia()}
 
             {/* Description */}
-            <div className="p-1 flex flex-row justify-center items-center space-x-1">
+            <div className="p-1 max-w-full overflow-x-scroll flex flex-row justify-center items-center space-x-1">
                 {(props.project.tech ?? [])
-                    .map(x => <p className="p-1 px-2 text-white bg-violet-500 rounded-full">{x}</p>)
+                    .map(x => <p className="p-1 px-2 text-white bg-violet-500 rounded-xl">{x}</p>)
                 }
             </div>
 

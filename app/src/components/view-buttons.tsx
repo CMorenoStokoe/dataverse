@@ -17,7 +17,7 @@ const ViewButton = (props: {
     active: boolean;
     onClick: () => void;
     pos: string;
-}) => <button className={"font-display drop-shadow leading-none text-violet-700 opacity-50 hover:opacity-100 md:text-2xl text-neutral-400 transition-all absolute " + props.pos}
+}) => <button className={"p-1 font-display drop-shadow leading-none text-violet-700 opacity-50 bg-black rounded-sm hover:opacity-100 sm:text-xl md:text-2xl text-neutral-400 transition-all absolute " + props.pos}
     onClick={props.onClick}>
         <p className="">
             {props.view}

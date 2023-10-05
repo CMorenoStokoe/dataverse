@@ -46,10 +46,10 @@ export const ProjectButtons = (props: {
     onClick: (project: Project) => void;
 }) => {
     const [showButtons, setShowButtons] = useState<boolean>(false);
-    return <div className="p-4 pb-24 w-full h-full absolute top-0 left-0 z-10 flex flex-wrap justify-center items-end animate__animated animate__fadeIn">
+    return <div className="p-4 pb-24 w-full max-w-screen overflow-x-auto h-full absolute top-0 left-0 z-10 flex flex-wrap justify-start lg:justify-center items-end animate__animated animate__fadeIn">
         {
             showButtons ?
-                <div className="max-w-screen flex flex-row items-center">{
+                <div className="flex flex-row items-start">{
                     props.projects
                         .sort((a, b) => b.year - a.year)
                         .map(x => <ProjectButton

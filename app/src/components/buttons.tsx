@@ -1,4 +1,4 @@
-import { faLinkedin, faGithub, faOrcid } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faOrcid, faDribbbleSquare, faUnsplash, faItchIo } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Templates for buttons
@@ -20,7 +20,7 @@ export const ViewButton = (props: {
 export const NavButton = (props: {
     text: string | JSX.Element;
     onClick: () => void;
-}) => <button className="p-2 pointer-events-auto font-display text-white hover:text-violet-600 text-2xl transition-all" onClick={props.onClick}>
+}) => <button className="p-2 self-center justify-self-center pointer-events-auto font-display text-white hover:text-violet-600 text-2xl transition-all" onClick={props.onClick}>
         {props.text}
     </button>
 
@@ -52,13 +52,16 @@ export const SelectDisciplineBtn = (props: {
 
 export const Socials = (props: {
     href: string,
-    brand: 'linkedIn' | 'github' | 'orcid'
+    brand: 'linkedIn' | 'github' | 'orcid' | 'dribbble' | 'unsplash' | "itch.io"
 }) => {
     const iconProp = () => {
         switch (props.brand) {
             case 'github': return (faGithub);
             case 'orcid': return (faOrcid);
-            default: return (faLinkedin);
+            case 'dribbble': return (faDribbbleSquare);
+            case 'linkedIn': return (faLinkedin);
+            case 'unsplash': return (faUnsplash);
+            case 'itch.io': return (faItchIo)
         }
     };
 
