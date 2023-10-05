@@ -18,7 +18,7 @@ export const Navigation = (props: {
                 ? <NavButton text={<p className="flex flex-row justify-center items-center space-x-2">
                     <FontAwesomeIcon icon={faArrowLeft} /> Back
                 </p>} onClick={props.onClick} />
-                : <div className="w-32"></div>
+                : <div className="opacity-0 p-2 pointer-events-none font-display text-2xl"><FontAwesomeIcon icon={faArrowLeft} /> Back</div>
         }
         <div className="w-full flex flex-col justify-center items-center">
             <p className="font-display text-xl text-white cursor-pointer hover:text-violet-600">
