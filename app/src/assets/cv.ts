@@ -44,7 +44,7 @@ export const portfolio: Project[] = [
 		title: 'Games For Good',
 		description:
 			'Games for good is a catalogue of knowledge games which are helping us understand public health',
-		link: 'g4g.html',
+		link: '../g4g.html',
 		image: 'promo/video-g4g.mp4',
 		tag: 'Serious Games'
 	},
@@ -106,7 +106,7 @@ export const portfolio: Project[] = [
 		title: 'MiRANA: Network Visualisation Tool',
 		description:
 			'This easy-to use tool produces accurate network visualisations of interrelated data in genetic epidemiology. Simply upload your data and press "produce graph" to produce a publication-quality graphic that can be used for exploratory and confirmatory analyses.',
-		link: 'mirana/index.html',
+		link: '../mirana/index.html',
 		image: 'img/mrnv_promo.PNG',
 		tag: 'Web and Interface',
 		tech: ['D3', 'JavaScript']
@@ -126,7 +126,7 @@ export const portfolio: Project[] = [
 		title: 'Visualising Data Reliability',
 		description:
 			'This visualisation demonstrates the impact of publication bias how researcher degrees of freedom can lead to over a hundred thousand different results from one study. A second version was presented at a regional academic conference (ESRC SWDTP conference).',
-		link: 'bilingualism2/index.html',
+		link: '../bilingualism2/index.html',
 		image: 'img/bilingualism_promo.PNG',
 		tag: 'Web and Interface',
 		tech: ['SVG', 'HTML', 'JavaScript']
